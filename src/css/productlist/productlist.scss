@@ -1,0 +1,105 @@
+.app {
+    &__cart {
+        display: flex;
+        margin: 15px;
+        padding: 25px;
+        border: 1px solid $color-primary-1;
+        background-color: $color-secondary-3;
+    }
+    .cart-header {
+        font-weight: bold;
+        @include ecartfont($h6 , $color-primary-1);
+    }
+
+    .cart-column {
+        display: flex;
+        align-items: center;
+        margin-right: 1.5em;
+        padding-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .cart-row {
+        display: flex;
+    }
+
+    .cart-item {
+        width: 45%;
+    }
+
+    .cart-price {
+        width: 20%;
+        @include ecartfont($h6 , $color-primary-1);
+    }
+
+    .cart-quantity {
+        width: 35%;
+    }
+
+    .cart-item-title {
+        margin-left: 0.5em;
+        @include ecartfont($h6 , $color-primary-1);
+        white-space: nowrap;
+    }
+
+    .cart-item-image {
+        width: 25px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .btn-primary {
+        display: block;
+        width: 100%;
+        padding: 5px;
+    }
+    .btn-danger {
+        color: white;
+        background-color: #eb5757;
+        border: none;
+        border-radius: 0.3em;
+        font-weight: bold;
+    }
+
+    .btn-danger:hover {
+        background-color: #cc4c4c;
+    }
+
+    .cart-quantity-input {
+        height: 34px;
+        width: 50px;
+        border-radius: 5px;
+        border: 1px solid $color-secondary-1;
+        background-color: $color-secondary-3;
+        padding: 0;
+        text-align: center;
+        @include ecartfont($h6 , $color-primary-1);
+        margin-right: 25px;
+    }
+
+    .cart-row:last-child {
+        border-bottom: 1px solid $color-primary-1;
+    }
+
+    .cart-row:last-child .cart-column {
+        border: none;
+    }
+
+    .cart-total {
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+
+    .cart-total-title {
+        font-weight: bold;
+        @include ecartfont($h5, $color-primary-1);
+        margin-right: 20px;
+    }
+
+    .cart-total-price {
+        font-size: 1.1em;
+        @include ecartfont($h5, $color-primary-1);
+    }
+
+
+}

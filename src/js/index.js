@@ -16,6 +16,7 @@ const controlItems = async () =>{
 }
 
 const addToCartClicked = (e) =>{
+    elements.cartDisplay.style.display = "block";
     let button = e.target;
     let shopItem = button.parentElement.parentElement;
     let title = shopItem.getElementsByClassName("app__title")[0].innerText;
