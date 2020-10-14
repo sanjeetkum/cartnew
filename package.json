@@ -10,19 +10,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sanjeetkum/AdobeEcart.git"
+    "url": "git+https://github.com/sanjeetkum/cartnew.git"
   },
   "author": "Sanjeet Kumar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sanjeetkum/AdobeEcart/issues"
+    "url": "https://github.com/sanjeetkum/cartnew/issues"
   },
-  "homepage": "https://github.com/sanjeetkum/AdobeEcart#readme",
+  "homepage": "https://github.com/sanjeetkum/cartnew/cartnew",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "css-loader": "^4.3.0",
+    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^4.5.0",
     "mini-css-extract-plugin": "^1.0.0",
     "node-loader": "^1.0.2",

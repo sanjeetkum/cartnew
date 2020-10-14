@@ -45,7 +45,7 @@ const addItemToCart = (title, price, imageSrc, orgPrice) => {
         <input class="cart-org-price" type="hidden" value="${orgPrice}">
         <div class="cart-quantity cart-column">
             <input class="cart-quantity-input" type="number" value="1">
-            <button class="btn btn-danger" type="button">REMOVE</button>
+            <button class="btn btn-danger" type="button">X</button>
         </div>`;
     cartRow.innerHTML = cartRowContents;
     cartItems.append(cartRow);
