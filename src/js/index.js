@@ -16,7 +16,7 @@ const controlItems = async () =>{
 }
 
 const addToCartClicked = (e) =>{
-    elements.cartDisplay.style.display = "block";
+    elements.cartDisplay.style.display = "inline-table";
     let button = e.target;
     let fadeoutHeader = button.parentElement.parentElement.parentElement.parentElement;
     let shopItem = button.parentElement.parentElement;
