@@ -2,3 +2,6 @@ body {
     font-family: $ecartreg;
     margin: 0;
 }
+p {
+    @include ecartfont($h6 , $color-primary-1);
+}
