@@ -1,77 +1,105 @@
 .app {
-    display: flex;
-    &__productListContainer {
+    &__cart {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        margin: 75px 15px 15px;
+        padding: 25px;
+        border: 1px solid $color-primary-1;
+        background-color: $color-secondary-3;
     }
-    .d-none {
-        display: none;
-    }
-    &__product {
-        background: $color-secondary-3;
-        margin: 15px;
-        padding: 15px;
-        border-radius: 5px;
-        min-width: 210px;
-        max-width: 210px;
-        text-align: center;
-    }
-    &__title {
-        display: block;
-        width: 100%;
-        text-align: center;
-        margin-bottom: 10px;
-        margin-top: 10px;
-        @include ecartfont($h5, $color-primary-1);
+    .cart-header {
+        font-weight: bold;
+        @include ecartfont($h6 , $color-primary-1);
     }
 
-    &__image {
-        height: 220px;
+    .cart-column {
         display: flex;
-        margin: auto;
-        width: 180px;
-    }
-
-    &__details {
         align-items: center;
-        padding: 5px;
+        margin-right: 1.5em;
+        padding-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .cart-row {
+        display: flex;
+    }
+
+    .cart-item {
+        width: 45%;
+    }
+
+    .cart-price {
+        width: 20%;
+        @include ecartfont($h6 , $color-primary-1);
+    }
+
+    .cart-quantity {
+        width: 35%;
+    }
+
+    .cart-item-title {
+        margin-left: 0.5em;
+        @include ecartfont($h6 , $color-primary-1);
         white-space: nowrap;
     }
 
-    &__display {
-        display: inline-block;
-        text-decoration: line-through;
-        text-decoration-color: $color-secondary-1;
-        text-decoration-style: solid;
-        color: $color-primary-1;
-    }
-    &__actual {
-        @include ecartfont($h5 , $color-primary-1);
-        font-weight: 700;
-    }
-    &__discount {
-        position: absolute;
-        background: $color-secondary-2;
-        color: $color-primary-2;
-        top: 10px;
-        left: -15px;
-        display: block;
-        padding: 2px 8px;
+    .cart-item-image {
+        width: 25px;
+        height: auto;
+        border-radius: 10px;
     }
 
-    &__img-holder {
-        position: relative;
+    .btn-primary {
+        display: block;
+        width: 100%;
+        padding: 5px;
     }
-    &__button {
-        border-radius: 4px;
-        border: 1px solid $color-secondary-4;
-        outline: none;
-        cursor: pointer;
-        padding: 10px;
-        background-color: $color-primary-2;
+    .btn-danger {
+        color: white;
+        background-color: #eb5757;
+        border: none;
+        border-radius: 0.3em;
+        font-weight: bold;
     }
-    &__button:hover {
-        color: $color-secondary-4;
+
+    .btn-danger:hover {
+        background-color: #cc4c4c;
     }
+
+    .cart-quantity-input {
+        height: 34px;
+        width: 50px;
+        border-radius: 5px;
+        border: 1px solid $color-secondary-1;
+        background-color: $color-secondary-3;
+        padding: 0;
+        text-align: center;
+        @include ecartfont($h6 , $color-primary-1);
+        margin-right: 25px;
+    }
+
+    .cart-row:last-child {
+        border-bottom: 1px solid $color-primary-1;
+    }
+
+    .cart-row:last-child .cart-column {
+        border: none;
+    }
+
+    .cart-total {
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+
+    .cart-total-title {
+        font-weight: bold;
+        @include ecartfont($h5, $color-primary-1);
+        margin-right: 20px;
+    }
+
+    .cart-total-price {
+        font-size: 1.1em;
+        @include ecartfont($h5, $color-primary-1);
+    }
+
+
 }

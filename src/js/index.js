@@ -18,11 +18,15 @@ const controlItems = async () =>{
 const addToCartClicked = (e) =>{
     elements.cartDisplay.style.display = "block";
     let button = e.target;
+    let fadeoutHeader = button.parentElement.parentElement.parentElement.parentElement;
     let shopItem = button.parentElement.parentElement;
+    console.log(fadeoutHeader);
     let title = shopItem.getElementsByClassName("app__title")[0].innerText;
     let actualPrice = shopItem.getElementsByClassName("app__actual")[0].innerText;
     let displayPrice = shopItem.getElementsByClassName("app__display")[0].innerText;
     let imageSrc = shopItem.getElementsByClassName("app__image")[0].src;
+    fadeoutHeader.getElementsByClassName('app__fadeout-header')[0].innerHTML = `<h3 class="app__info">${title} is added to cart</h3>`;
+
     addItemToCart(title, actualPrice, imageSrc, displayPrice);
 }
 const addItemToCart = (title, price, imageSrc, orgPrice) => {

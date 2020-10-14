@@ -1,105 +1,93 @@
 .app {
-    &__cart {
+    display: flex;
+    &__productListContainer {
         display: flex;
-        margin: 15px;
-        padding: 25px;
-        border: 1px solid $color-primary-1;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 60px 0;
+    }
+    &__fadeout-header {
+        height: 50px;
         background-color: $color-secondary-3;
+        width: 100%;
+        position: fixed;
+        text-align: center;
+        margin: auto;
     }
-    .cart-header {
-        font-weight: bold;
-        @include ecartfont($h6 , $color-primary-1);
+    &__info {
+        background-color: $color-secondary-2;
+        width: 360px;
+        margin: 5px auto auto;
+        padding: 10px;
+        border-radius: 10px;
     }
-
-    .cart-column {
-        display: flex;
-        align-items: center;
-        margin-right: 1.5em;
-        padding-bottom: 10px;
+    .d-none {
+        display: none;
+    }
+    &__product {
+        background: $color-secondary-3;
+        margin: 15px;
+        padding: 15px;
+        border-radius: 5px;
+        min-width: 210px;
+        max-width: 210px;
+        text-align: center;
+    }
+    &__title {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
         margin-top: 10px;
+        @include ecartfont($h5, $color-primary-1);
     }
 
-    .cart-row {
+    &__image {
+        height: 220px;
         display: flex;
+        margin: auto;
+        width: 180px;
     }
 
-    .cart-item {
-        width: 45%;
-    }
-
-    .cart-price {
-        width: 20%;
-        @include ecartfont($h6 , $color-primary-1);
-    }
-
-    .cart-quantity {
-        width: 35%;
-    }
-
-    .cart-item-title {
-        margin-left: 0.5em;
-        @include ecartfont($h6 , $color-primary-1);
+    &__details {
+        align-items: center;
+        padding: 5px;
         white-space: nowrap;
     }
 
-    .cart-item-image {
-        width: 25px;
-        height: auto;
-        border-radius: 10px;
+    &__display {
+        display: inline-block;
+        text-decoration: line-through;
+        text-decoration-color: $color-secondary-1;
+        text-decoration-style: solid;
+        color: $color-primary-1;
     }
-
-    .btn-primary {
+    &__actual {
+        @include ecartfont($h5 , $color-primary-1);
+        font-weight: 700;
+    }
+    &__discount {
+        position: absolute;
+        background: $color-secondary-2;
+        color: $color-primary-2;
+        top: 10px;
+        left: -15px;
         display: block;
-        width: 100%;
-        padding: 5px;
-    }
-    .btn-danger {
-        color: white;
-        background-color: #eb5757;
-        border: none;
-        border-radius: 0.3em;
-        font-weight: bold;
+        padding: 2px 8px;
     }
 
-    .btn-danger:hover {
-        background-color: #cc4c4c;
+    &__img-holder {
+        position: relative;
     }
-
-    .cart-quantity-input {
-        height: 34px;
-        width: 50px;
-        border-radius: 5px;
-        border: 1px solid $color-secondary-1;
-        background-color: $color-secondary-3;
-        padding: 0;
-        text-align: center;
-        @include ecartfont($h6 , $color-primary-1);
-        margin-right: 25px;
+    &__button {
+        border-radius: 4px;
+        border: 1px solid $color-secondary-4;
+        outline: none;
+        cursor: pointer;
+        padding: 10px;
+        background-color: $color-primary-2;
     }
-
-    .cart-row:last-child {
-        border-bottom: 1px solid $color-primary-1;
+    &__button:hover {
+        color: $color-secondary-4;
     }
-
-    .cart-row:last-child .cart-column {
-        border: none;
-    }
-
-    .cart-total {
-        margin-top: 10px;
-        margin-right: 10px;
-    }
-
-    .cart-total-title {
-        font-weight: bold;
-        @include ecartfont($h5, $color-primary-1);
-        margin-right: 20px;
-    }
-
-    .cart-total-price {
-        font-size: 1.1em;
-        @include ecartfont($h5, $color-primary-1);
-    }
-
-
 }
