@@ -1,0 +1,42 @@
+{
+  "name": "adobecart",
+  "version": "1.0.0",
+  "description": "Ecart Application",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sanjeetkum/AdobeEcart.git"
+  },
+  "author": "Sanjeet Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sanjeetkum/AdobeEcart/issues"
+  },
+  "homepage": "https://github.com/sanjeetkum/AdobeEcart#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^4.3.0",
+    "html-webpack-plugin": "^4.5.0",
+    "mini-css-extract-plugin": "^1.0.0",
+    "node-loader": "^1.0.2",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.3",
+    "style-loader": "^2.0.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "babel-polyfill": "^6.26.0",
+    "file-loader": "^6.1.1",
+    "uniqid": "^5.2.0"
+  }
+}

@@ -1,0 +1,40 @@
+@mixin mediaQueries($mediaquery) {
+    @media #{$mediaquery} {
+        @content;
+    }
+}
+
+@mixin ecartfont($font, $color: null) {
+    @if type-of($font == map) {
+        // incluce all common styles
+        font-family: map-get($font, font-family);
+
+        @if map-has-key($font, font-stretch) {
+            font-stretch: map-get($font, font-stretch);
+        }
+        @if map-has-key($font, letter-spacing) {
+            letter-spacing: map-get($font, letter-spacing);
+        }
+        @if map-has-key($font, line-height) {
+            line-height: map-get($font, line-height);
+        };
+    }
+@else
+    {
+        font-family: $font;
+    }
+
+    @if($color) {
+        color: $color;
+    }
+}
+
+// @mixin applyfont($font, $media) {
+//     font-size: map-get(map-get($font, $media), $key: font-size);
+//     @if map-has-key(map-get($font, $media), $key: line-height) {
+//         line-height: map-get(map-get($font, $media), $key: line-height);
+//     }
+//     @if map-has-key(map-get($font, $media), $key: letter-spacing) {
+//         letter-spacing: map-get(map-get($font, $media), $key: letter-spacing);
+//     }
+// }

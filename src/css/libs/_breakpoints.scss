@@ -1,0 +1,14 @@
+$screen: unquote('only screen');
+$mobile-breakpoint: 576px;
+$tablet-breakpoint: 768px;
+$desktop-breakpoint: 992px;
+$large-desktop-breakpoint: 1250px;
+
+$mobile: unquote('#{$screen} and (min-width: #{$mobile-breakpoint})');
+$tablet: unquote('#{$screen} and (min-width: #{$tablet-breakpoint})');
+$desktop: unquote('#{$screen} and (min-width: #{$desktop-breakpoint})');
+$large-desktop: unquote('#{$screen} and (min-width: #{$large-desktop-breakpoint})');
+
+
+$mobile-max: unquote('#{$screen} and (max-width:#{$tablet-breakpoint - 1})');
+$tablet-max: unquote('#{$screen} and (max-width: #{$desktop-breakpoint - 1})');

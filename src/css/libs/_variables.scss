@@ -1,0 +1,53 @@
+$ecartreg: 'HelveticaNeueReg', sans-serif; // HelveticaNeue-Regular
+$ecartbold: 'HelveticaNeueBold', sans-serif; // HelveticaNeue-Bold
+
+
+$h1: (
+    font-family: $ecartreg,
+    font-stretch: normal,
+    'desktop': (font-size: 4.375rem, line-height: 1, letter-spacing: normal),
+    'tablet': (font-size: 3.125rem, line-height: 1.1 , letter-spacing: normal),
+    'mobile': (font-size: 1.5rem, line-height: 1.25, letter-spacing: normal)
+);
+
+$h2: (
+    font-family: $ecartbold,
+    font-stretch: normal,
+    'desktop': (font-size: 3.125rem, line-height: 1, letter-spacing: normal),
+    'tablet': (font-size: 3.125rem, line-height: 1, letter-spacing: normal),
+    'mobile': (font-size: 1.875rem, line-height: 1.03, letter-spacing: normal)
+);
+
+$h3: (
+    font-family: $ecartreg,
+    font-stretch: normal,
+    'desktop': (font-size: 3.125rem, line-height: 1, letter-spacing: normal),
+    'tablet': (font-size: 2.5rem, line-height: 1, letter-spacing: normal),
+    'mobile': (font-size: 1.875rem, line-height: 1.13, letter-spacing: normal)
+);
+
+$h4: (
+    font-family: $ecartreg,
+    font-stretch: normal,
+    'desktop': (font-size: 3.125rem, line-height: 1, letter-spacing: normal),
+    'tablet': (font-size: 2rem, line-height: 1, letter-spacing: normal),
+    'mobile': (font-size: 1.875rem, line-height: 1.13, letter-spacing: normal)
+);
+
+$h5: (
+    font-family: $ecartbold,
+    font-stretch: normal,
+    letter-spacing: normal,
+    'desktop': (font-size: 1.25rem, line-height: 1.2),
+    'tablet': (font-size: 1.25rem, line-height: 1.2),
+    'mobile': (font-size: 0.75rem, line-height: 1.14)
+);
+
+$h6: (
+    font-family: $ecartbold,
+    font-stretch: normal,
+    letter-spacing: normal,
+    'desktop': (font-size: 0.875rem, line-height: 1.2),
+    'tablet': (font-size: 0.875rem, line-height: 1.22),
+    'mobile': (font-size: 0.75rem, line-height: 1.17)
+);
