@@ -35,7 +35,7 @@ const addItemToCart = (title, price, imageSrc, orgPrice) => {
         return;
       }
     }
-    const cartRowContents = `
+    const cartMarkUp = `
         <div class="cart-item cart-column">
             <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
             <span class="cart-item-title">${title}</span>
@@ -46,15 +46,15 @@ const addItemToCart = (title, price, imageSrc, orgPrice) => {
             <input class="cart-quantity-input" type="number" value="1">
             <button class="btn btn-danger" type="button">X</button>
         </div>`;
-    cartRow.innerHTML = cartRowContents;
+    cartRow.innerHTML = cartMarkUp;
     cartItems.append(cartRow);
     cartRow
       .getElementsByClassName("btn-danger")[0]
-      .addEventListener("click", removeCartItem);
+      .addEventListener("click", deleteCartItems);
     cartRow
       .getElementsByClassName("cart-quantity-input")[0]
-      .addEventListener("change", quantityChanged);
-      updateCartTotal();
+      .addEventListener("change", countUpdated);
+      updateTotal();
   }
 
 
@@ -77,7 +77,7 @@ const addItemToCart = (title, price, imageSrc, orgPrice) => {
     document.getElementsByClassName("items-discount")[0].innerText = discount;
     document.getElementsByClassName("items-count")[0].innerText = count;
   }
-  const updateCartTotal = () => {
+  const updateTotal = () => {
     let cartItemContainer = document.getElementsByClassName("cart-items")[0];
     let cartRows = cartItemContainer.getElementsByClassName("cart-row");
    
@@ -97,18 +97,18 @@ const addItemToCart = (title, price, imageSrc, orgPrice) => {
     document.getElementsByClassName("cart-total-price")[0].innerText =
       "$" + total;
   }
-  const removeCartItem = (event) => {
+  const deleteCartItems = (event) => {
     let buttonClicked = event.target;
     buttonClicked.parentElement.parentElement.remove();
-    updateCartTotal();
+    updateTotal();
   }
 
- const quantityChanged = (event) => {
+ const countUpdated = (event) => {
     let input = event.target;
     if (isNaN(input.value) || input.value <= 0) {
       input.value = 1;
     }
-    updateCartTotal();
+    updateTotal();
   }
 
 window.addEventListener('load', function() {
