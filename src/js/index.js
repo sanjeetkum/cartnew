@@ -1,6 +1,5 @@
 // Global app controller
 import ShoppingItems from './models/ShoppingItems';
-import CartList from './models/CartList';
 import * as shoppingItemsView from './views/shoppingItemView';
 import * as cartView from './views/cartView';
 import {elements} from './views/base';
@@ -123,5 +122,4 @@ elements.productList.addEventListener('click', e =>{
 });
 
 
-window.l = new CartList();
 
