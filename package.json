@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/sanjeetkum/cartnew/issues"
   },
-  "homepage": "https://github.com/sanjeetkum/cartnew/cartnew",
+  "homepage": ".",
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
